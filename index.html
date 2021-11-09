@@ -11,18 +11,18 @@
 <body>
     <header>
         <h1>
-            CS Portfolio
+           CS Portfolio
         </h1>
         <nav>
             <ul>
                 <li>
-                    <a href="aboutme">About me</a>
+                    <a href="#aboutme">About me</a>
                 </li>
                 <li>
-                    <a href="works">My Work</a>
+                    <a href="#works">My Work</a>
                 </li>
                 <li>
-                    <a href="contact">Contact</a>
+                    <a href="#contact">Contact</a>
                 </li>
                 <li>
                     <a href="./assests/docs/resume.pdf">Resume</a>
@@ -38,10 +38,10 @@
             <h3 id="aboutme">
                 About me
             </h3>
-            <article>
+            <article class="twocolumn">
                 <img src="./assets/img/me.png" alt="Photo of Cesar Sanchez">
                 <p>  
-                    Hi! I am César. I am currently a Full Stack Web Developer student. I am learning fast to become an efficient developer. I want to be able to create friendly webpages and apps that make communication processes private and easy to use for personal and professional uses. I am interested in part-time jobs and freelance projects that are both a challenge and fun. I am also a Clinical Psychologist with private practice. I like videogames, cats and almost every form of audiovisual entertainment.
+                    Hi! I am César. I am currently a Full Stack Web Developer student. I am learning fast to become an efficient developer. I want to be able to create friendly webpages and apps that make communication processes private and easy to use for personal and professional users. I am interested in part-time jobs and freelance projects that are both a challenge and fun. I am also a Clinical Psychologist with private practice. I like videogames, cats and almost every form of audiovisual entertainment.
                 </p>
             </article>
 
@@ -51,11 +51,39 @@
             <h3 id="works">
                 My Work
             </h3>
-            <figure>
-                <a href="#"><img src="./assets/img/work1" alt="Webpage"></a>
-                <figcaption>Text of the image</figcaption>
-            </figure>
+            <div class="grid">
+                <figure>
+                    <a href="#"><img class="firstfigure" src="./assets/img/work1.png" alt="Webpage"></a>
+                    <div class="textbox">
+                    <h4>Title image</h4>
+                    <figcaption>Text of the image</figcaption>
+                    </div>
+                </figure>
 
+                <figure class="secfigure">
+                    <a href="#"><img src="./assets/img/work2.png" alt="Webpage"></a>
+                    <div class="textbox">
+                    <h4>Title image</h4>
+                    <figcaption>Text of the image</figcaption>
+                    </div>
+                </figure>
+
+                <figure class="secfigure">
+                    <a href="#"><img src="./assets/img/work3.png" alt="Webpage"></a>
+                    <div class="textbox">
+                    <h4>Title image</h4>
+                    <figcaption>Text of the image</figcaption>
+                    </div>
+                </figure>
+
+                <figure class="secfigure">
+                    <a href="#"><img src="./assets/img/work4.png" alt="Webpage"></a>
+                    <div class="textbox">
+                    <h4>Title image</h4>
+                    <figcaption>Text of the image</figcaption>
+                
+            </figure>
+            </div>
         </section>
        
     </main>
@@ -63,32 +91,34 @@
         <h3 id="contact">
             Contact me
         </h3>
+        <div>
         <ul>
             <li>
                 <a href="mailto:cesanchezesc@gmail.com" target="_blank">Email</a>
             </li>
             <li>
-                <a href="https://github.com/csancheze">Github</a>
+                <a href="https://github.com/csancheze" target="_blank">Github</a>
             </li>
             <li>
-                <a href="https://twitter.com/?lang=es">Twitter</a>
+                <a href="https://twitter.com/?lang=es" target="_blank">Twitter</a>
             </li>
             <li>
-                <a href="https://wa.me/5215510817016"> Whatsapp me!</a>
+                <a href="https://wa.me/5215510817016" target="_blank"> Whatsapp me!</a>
             </li>
 
         </ul>
         <form>
-            <h4>Or, if you prefer to be reached, please leave your contact info below.</h4>
+            <h5>Or, if you prefer to be reached, please leave your contact info below.</h5>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name">
             <label for="email">Email:</label>
             <input type="email" id="email" name="email">
             <label for="subject">Subject:</label>
-            <br>
-            <textarea id="subject" name="subject" rows="5" cols="50">Please leave a message.</textarea>
-            <input type="submit" value="Send">
-        </form>
+            <textarea id="subject" name="subject" rows="2" cols="25">Please leave a message.</textarea>
+            <input id="buttonsend" type="submit" value="Send">
+        </form> 
+        </div>
+
     </footer>
 </body>
 </html>

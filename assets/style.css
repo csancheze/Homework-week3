@@ -1,0 +1,189 @@
+/*General*/
+
+:root {
+    --Background: rgb(0, 58, 58);
+    --MainColor: rgb(125, 193, 238);
+    --SeconColor: rgb(83, 125, 153);
+    --Textcolor: white;
+}
+
+* {
+    font-family: 'Times New Roman', Times, serif;
+    font-size:large;
+}
+
+li {
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    color: var(--MainColor);
+}
+
+body {
+    background: var(--Background);
+    color: var(--MainColor);
+}
+
+/*Header*/
+
+header {
+    background: var(--MainColor);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px; 
+    align-items: center;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 300%;
+    background: var(--SeconColor);
+    width: 350px;
+    text-align: right;
+    margin-left: -20px;
+    margin-right: 5px;
+    padding: 5px 10px;
+    color: var(--MainColor);
+}
+
+header li {
+    margin: 0px 15px;
+    border-bottom: 2px solid var(--SeconColor);
+    padding: 5px;
+}
+
+header li a {
+    color: var(--Background);
+    font-size: 125%;
+}
+
+h2 {
+    margin:0;
+    padding: 20px;
+    background: linear-gradient(to right, var(--SeconColor),var(--MainColor),var(--SeconColor),var(--MainColor),var(--SeconColor));
+    text-align: right;
+    font-size: 150%;
+    color:var(--Background);
+    width: 100%;
+}
+
+/*Main and sections*/
+
+/*About me*/
+.twocolumn {
+    display: flex;
+}
+h3 {
+    flex: 20%;
+    text-align: right;
+    padding: 20px 15px;
+    margin: 15px 15px;
+    border-right: 3px solid var(--MainColor);
+    font-size: 150%;
+   
+}
+
+.twocolumn article {
+    flex: 80%;
+    padding: 20px 15px;
+    margin: 15px 15px;
+    align-items: center;
+    
+}
+
+.twocolumn article img {
+    padding: 0px;
+    margin: 15px 0px;
+    height: 150px;
+    width: 150px;
+    border-radius: 20%;
+    border: 5px solid var(--MainColor);
+
+}
+.twocolumn article p {
+    padding: 0px;
+    margin: 0px 10px;
+    height: 150px;
+    overflow: auto;    
+}
+
+/*My Work*/ 
+.grid {
+    flex: 80%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.twocolumn figure {
+    
+    padding: 20px 15px;
+    margin: 15px 15px;
+    position: relative;
+}
+
+.firstfigure {
+    border: 5px solid var(--MainColor);
+    width: 100%;
+    
+}
+
+.secfigure img {
+    width:400px;
+    height: 300px;
+    border: 5px solid var(--MainColor);
+    flex: 45%;
+}
+
+
+.textbox {
+    position: absolute;
+    background: var(--MainColor);
+    color: var(--Background);
+    bottom: 50px;
+    width: 200px;
+    height: 70px;
+    margin: 5px;
+    padding: 20px;
+    text-align: right;
+}
+
+/*Footer*/
+
+footer div {
+    flex:80%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 15px;
+    margin: 15px 15px;
+
+}
+footer div ul {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 20px;
+
+}
+
+footer div ul li {
+    border-bottom: 2px solid var(--MainColor);
+    padding: 5px;
+}
+
+
+footer div ul li a {
+    font-size: 125%;
+}
+
+form {
+    margin: 20px;
+    text-align: center;
+}
+
+form * { 
+    display: block;
+    text-align: center;
+    margin: 5px auto;
+}
