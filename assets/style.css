@@ -32,20 +32,27 @@ header {
     background: var(--MainColor);
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding: 10px 20px; 
     align-items: center;
     width: 100%;
+    margin-left: 0;
+
 }
 
 header h1 {
     font-size: 300%;
     background: var(--SeconColor);
-    width: 350px;
     text-align: right;
     margin-left: -20px;
     margin-right: 5px;
-    padding: 5px 10px;
+    padding: 5px 10px 5px 50px;
     color: var(--MainColor);
+}
+
+   
+header ul {
+    flex: 0 5 auto;
 }
 
 header li {
@@ -98,6 +105,7 @@ h3 {
     margin: 15px 0px;
     height: 150px;
     width: 150px;
+    max-width: 100%;
     border-radius: 20%;
     border: 5px solid var(--MainColor);
 
@@ -150,6 +158,8 @@ h3 {
     width:400px;
     height: 300px;
     flex: 48%;
+    flex: 0 5 400px;
+    max-width: 100%;
    
     
 }
@@ -163,6 +173,7 @@ h3 {
     width: 400px;
     height: 300px;
     transition: 0.5s;
+    max-width: 100%;
 }
 
 .secfigure:hover a::before {
@@ -185,6 +196,10 @@ h3 {
 
 /*Footer*/
 
+footer {
+    max-width: 100%;
+}
+
 footer div {
     flex:80%;
     display: flex;
@@ -196,6 +211,7 @@ footer div {
 footer div ul {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     margin: 10px 20px;
 
 }
@@ -213,10 +229,13 @@ footer div ul li a {
 form {
     margin: 20px;
     text-align: center;
+   
+    overflow: auto;
 }
 
 form * { 
     display: block;
     text-align: center;
     margin: 5px auto;
+    max-width: 100%;
 }
