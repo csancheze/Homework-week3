@@ -4,16 +4,14 @@
     --Background: rgb(0, 58, 58);
     --MainColor: rgb(125, 193, 238);
     --SeconColor: rgb(83, 125, 153);
-    --Textcolor: white;
 }
 
 * {
     font-family: 'Times New Roman', Times, serif;
-    font-size:large;
+    line-height: 1.5;
 }
-
 li {
-    display: inline-block;
+    display: inline;
 }
 
 a {
@@ -33,26 +31,25 @@ header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 10px 20px; 
+    padding: 10px 0px; 
     align-items: center;
     width: 100%;
     margin-left: 0;
-
 }
 
 header h1 {
     font-size: 300%;
     background: var(--SeconColor);
     text-align: right;
-    margin-left: -20px;
     margin-right: 5px;
     padding: 5px 10px 5px 50px;
-    color: var(--MainColor);
 }
 
-   
-header ul {
-    flex: 0 5 auto;
+
+@media screen and (max-width: 500px) {
+    header h1 {
+        font-size: 200%;
+    }
 }
 
 header li {
@@ -60,6 +57,7 @@ header li {
     border-bottom: 2px solid var(--SeconColor);
     padding: 5px;
 }
+
 
 header li a {
     color: var(--Background);
@@ -73,48 +71,59 @@ h2 {
     text-align: right;
     font-size: 150%;
     color:var(--Background);
-    width: 100%;
 }
 
 /*Main and sections*/
 
-/*About me*/
-.twocolumn {
-    display: flex;
-}
 h3 {
     flex: 20%;
     text-align: right;
     padding: 20px 15px;
     margin: 15px 15px;
     border-right: 3px solid var(--MainColor);
-    font-size: 150%;
-   
+    font-size: 150%; 
 }
+
+.twocolumn {
+    display: flex;
+}
+
+
+/*About me*/
 
 .twocolumn article {
     flex: 80%;
     padding: 20px 0px;
-    margin: 15px 0px;
+    margin: 0px;
+    display: flex;
     align-items: center;
-    
+    justify-content: space-evenly;
 }
 
 .twocolumn article img {
     padding: 0px;
-    margin: 15px 0px;
     height: 150px;
     width: 150px;
     max-width: 100%;
     border-radius: 20%;
     border: 5px solid var(--MainColor);
-
 }
 .twocolumn article p {
     padding: 0px;
     margin: 0px 10px;
     height: 150px;
-    overflow: auto;    
+    overflow: auto;
+    text-align: justify; 
+}
+
+@media screen and (max-width: 500px) {
+    .twocolumn article p {
+        line-height: 1;
+    }
+    .twocolumn article img {
+        height: 75px;
+        width: 75px;
+    }
 }
 
 /*My Work*/ 
@@ -124,18 +133,19 @@ h3 {
     flex-wrap: wrap;
     justify-content:space-around;
     width: 100%;
+    padding: 20px 0px;
 }
 
 .twocolumn figure {
-    
     padding: 0;
-    margin: 15px 5px;
+    margin: 10px 0px;
     position: relative;
     border: 5px solid var(--MainColor);
 }
 
 .firstfigure {
     width: 100%;
+    margin: 0px 0px -7px 0px;
 }
 
 .firstimg a::before {
@@ -147,6 +157,7 @@ h3 {
     opacity: 0.5;
     width: 100%;
     height: 100%;
+    max-width: 100%;
     transition: 0.5s;
 }
 
@@ -156,12 +167,11 @@ h3 {
 
 .secfigure img {
     width:400px;
-    height: 300px;
+    height: 100%;
     flex: 48%;
     flex: 0 5 400px;
     max-width: 100%;
-   
-    
+    margin: 0px 0px -7px 0px;
 }
 .secfigure a::before {
     position:absolute;
@@ -171,7 +181,7 @@ h3 {
     background: rgb(66, 66, 95);
     opacity: 0.5;
     width: 400px;
-    height: 300px;
+    height: 100%;
     transition: 0.5s;
     max-width: 100%;
 }
@@ -180,57 +190,58 @@ h3 {
     opacity:0;
 }
 
-
 .textbox {
     position: absolute;
     background: var(--MainColor);
     color: var(--Background);
-    bottom: 50px;
+    bottom: 30px;
     width: 200px;
-    height: 70px;
+    max-width: 100%;
+    height: 75px;
     margin: 0px;
-    padding: 20px;
+    padding: 15px;
     text-align: right;
     z-index: 2;
 }
 
-/*Footer*/
-
-footer {
-    max-width: 100%;
+@media screen and (max-width:500px) {
+    .textbox {
+        width: 100px;
+    }
+    .textbox *{
+        font-size: small;
+    }
 }
+
+/*Footer*/
 
 footer div {
     flex:80%;
     display: flex;
     flex-direction: column;
-    padding: 20px 15px;
+    padding: 20px 0px;
     margin: 15px 0px;
-
 }
+
 footer div ul {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin: 10px 20px;
-
+    margin: 10px 5px;
 }
 
 footer div ul li {
     border-bottom: 2px solid var(--MainColor);
-    padding: 5px;
+    padding: 5px 0px;
 }
-
 
 footer div ul li a {
     font-size: 125%;
 }
 
 form {
-    margin: 20px;
-    text-align: center;
-   
-    overflow: auto;
+    margin: 20px 0px;
+    text-align: center;  
 }
 
 form * { 
@@ -238,4 +249,5 @@ form * {
     text-align: center;
     margin: 5px auto;
     max-width: 100%;
+    width: 50%;
 }
